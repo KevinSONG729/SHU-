@@ -1,0 +1,29 @@
+<wux-popup bind:close="hide" position="bottom" visible="{{in}}">
+    <view class="wux-class wux-keyboard">
+        <view class="wux-keyboard__hd" wx:if="{{inputText}}">{{inputText}}</view>
+        <view class="wux-keyboard__bd">
+            <view class="wux-keyboard__label" wx:if="{{maxlength!==-1}}" wx:for="{{keys}}" wx:key="index">
+                <view class="wux-keyboard__password {{password?'wux-keyboard__password--dot':''}} {{value.length>=index+1?'wux-keyboard__password--active':''}}">
+                        {{!password?value[index]:''}}
+                    </view>
+            </view>
+            <input disabled class="wux-keyboard__input" password="{{password}}" type="text" value="{{value}}" wx:if="{{maxlength===-1}}"></input>
+        </view>
+        <view class="wux-keyboard__ft">
+            <view class="wux-keyboard__title" wx:if="{{titleText}}">{{titleText}}</view>
+            <view class="wux-keyboard__numbers">
+                <block wx:for="{{nums}}" wx:for-item="n" wx:key="index">
+                    <view class="wux-keyboard__number" wx:if="{{index===3}}">
+                        <view bindtap="hide" class="wux-keyboard__text" hoverClass="wux-keyboard__text--hover" hoverStartTime="20" hoverStayTime="170" wx:if="{{showCancel}}">{{cancelText}}</view>
+                        <view class="wux-keyboard__text" hoverClass="wux-keyboard__text--hover" hoverStartTime="20" hoverStayTime="170" wx:else></view>
+                        <view bindtap="increase" class="wux-keyboard__text" data-value="{{m}}" hoverClass="wux-keyboard__text--hover" hoverStartTime="20" hoverStayTime="170" wx:for="{{n}}" wx:for-item="m" wx:key="index">{{m}}</view>
+                        <view bindtap="decrease" class="wux-keyboard__text">×</view>
+                    </view>
+                    <view class="wux-keyboard__number" wx:else>
+                        <view bindtap="increase" class="wux-keyboard__text" data-value="{{m}}" hoverClass="wux-keyboard__text--hover" hoverStartTime="20" hoverStayTime="170" wx:for="{{n}}" wx:for-item="m" wx:key="index">{{m}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</wux-popup>

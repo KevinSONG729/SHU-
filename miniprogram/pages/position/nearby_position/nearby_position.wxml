@@ -1,0 +1,34 @@
+<view>
+    <wux-wing-blank size="default" wx:for="{{datalist}}" wx:key="index">
+        <wux-card bordered="false" extra="{{item.refresh_time}}" thumb="../../public/icon/stick.png" thumbStyle="width:20px;height:20px" title="{{item.position_title}}">
+            <view class="list_center" slot="body">
+                <view class="list_center_left">
+                    <view>{{item.type}}/{{item.salary_type}}/{{item.worker_time}}小时制</view>
+                    <view>
+                        <view wx:for="{{item.welfare}}" wx:for-item="item_two" wx:key="index_two">{{item_two}}</view>
+                    </view>
+                </view>
+                <view class="list_center_right">
+                    <text>{{item.salary}}</text>
+                </view>
+            </view>
+            <view class="list_bottom" slot="footer">
+                <view>
+          已有{{item.apply}}人申请了该工作
+        </view>
+                <view>
+          {{item.views}}浏览｜{{item.distance}}km
+        </view>
+            </view>
+        </wux-card>
+    </wux-wing-blank>
+    <view>
+        <wux-divider class="{{onReachBottom==true?'show':'hide'}}">
+            <view class="loadmore">
+                <view class="loading"></view>
+                <text class="text">正在加载</text>
+            </view>
+        </wux-divider>
+        <wux-divider dashed class="{{onReachBottom==true?'hide':'show'}}" text="已经到底啦！"></wux-divider>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+<view>
+    <form bindreset="formReset" bindsubmit="formSubmit">
+        <wux-cell hoverClass="none">
+            <wux-input bind:change="changeTitle" controlled="true" label="{{config.title}}" placeholder="请输入您的{{config.title}}" value="{{title}}"></wux-input>
+        </wux-cell>
+        <wux-cell class="{{config.name==''?'hide':'show'}}" hoverClass="none">
+            <wux-input bind:change="changeName" controlled="true" label="{{config.name}}" placeholder="请输入您的{{config.name}}" value="{{name}}"></wux-input>
+        </wux-cell>
+        <wux-cell hoverClass="none">
+            <picker bindchange="changeStart_date" mode="date" value="{{sex}}">
+                <wux-input disabled controlled="true" label="{{config.start_date}}" placeholder="请选择您的{{config.start_date}}" value="{{start_date}}"></wux-input>
+            </picker>
+        </wux-cell>
+        <wux-cell hoverClass="none">
+            <picker bindchange="changeEnd_date" mode="date" value="{{sex}}">
+                <wux-input disabled controlled="true" label="{{config.end_date}}" placeholder="请选择您的{{config.end_date}}" value="{{end_date}}"></wux-input>
+            </picker>
+        </wux-cell>
+        <wux-cell-group class="{{config.describe==''?'hide':'show'}}" title="{{config.describe}}">
+            <wux-cell hoverClass="none">
+                <wux-textarea hasCount bind:change="changeTextarea" controlled="true" cursorSpacing="80" maxlength="200" placeholder="请输入{{config.describe}}..." rows="3" value="{{describe}}"></wux-textarea>
+            </wux-cell>
+        </wux-cell-group>
+        <view class="btn_box">
+            <button class="weui-btn" formType="submit" style="background:#FBC139;" type="primary">提交</button>
+            <button class="weui-btn" formType="reset" style="background:#FFF;color:#000" type="primary">删除</button>
+        </view>
+    </form>
+</view>

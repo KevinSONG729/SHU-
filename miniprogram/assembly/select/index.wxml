@@ -1,0 +1,30 @@
+<wux-popup bind:close="onCancel" position="bottom" visible="{{visible}}">
+    <view class="wux-select__toolbar" wx:if="{{toolbar}}">
+        <view class="wux-select__toolbar-inner">
+            <view bindtap="onCancel" class="wux-select__toolbar-button wux-select__toolbar-button--cancel" hoverClass="wux-select__toolbar-button--hover" wx:if="{{toolbar.cancelText}}">{{toolbar.cancelText}}</view>
+            <view class="wux-select__toolbar-title">{{toolbar.title}}</view>
+            <view bindtap="onConfirm" class="wux-select__toolbar-button wux-select__toolbar-button--confirm" hoverClass="wux-select__toolbar-button--hover" wx:if="{{toolbar.confirmText}}">{{toolbar.confirmText}}</view>
+        </view>
+    </view>
+    <scroll-view scrollY class="wux-select__content">
+        <wux-radio-group bind:change="onRadioChange" value="{{value}}" wx:if="{{!multiple}}">
+            <wux-radio color="{{item.color}}" disabled="{{item.disabled}}" label="{{item.label}}" thumb="{{item.thumb}}" title="{{item.title}}" value="{{item.value}}" wx:for="{{common.getItems(options)}}" wx:key="index"></wux-radio>
+        </wux-radio-group>
+        <wux-checkbox-group bind:change="onCheckboxChange" value="{{value}}" wx:else>
+            <wux-checkbox color="{{item.color}}" disabled="{{item.disabled}}" extra="{{item.extra}}" label="{{item.label}}" title="{{item.title}}" value="{{item.value}}" wx:for="{{common.getItems(options)}}" wx:key="index"></wux-checkbox>
+        </wux-checkbox-group>
+    </scroll-view>
+</wux-popup>
+<wxs module="common">
+module.exports.getItems = (function(array) {
+    return (array.map((function(n) {
+        if (n.constructor !== 'Object') {
+            return (({
+                value: n,
+                title: n,
+            }))
+        };
+        return (n)
+    })))
+});
+</wxs>

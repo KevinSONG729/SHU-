@@ -1,0 +1,12 @@
+<view>
+    <form bindsubmit="formSubmit">
+        <wux-cell-group title="{{title}}">
+            <wux-cell hoverClass="none">
+                <wux-textarea hasCount bind:change="changeTextarea" controlled="true" cursorSpacing="80" maxlength="200" placeholder="请输入{{title}}..." rows="3" value="{{textarea}}"></wux-textarea>
+            </wux-cell>
+        </wux-cell-group>
+        <view class="btn_box">
+            <button class="weui-btn" formType="submit" style="background:#FBC139;" type="primary">提交</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,12 @@
+{
+    "disableScroll": false,
+    "navigationBarTitleText": "SHU缘起",
+    "usingComponents": {
+        "wux-notice-bar": "../../../assembly/notice-bar/index",
+        "wux-tabs": "../../../assembly/tabs/index",
+        "wux-tab": "../../../assembly/tab/index",
+        "wux-badge": "../../../assembly/badge/index",
+        "wux-card": "../../../assembly/card/index",
+        "wux-wing-blank": "../../../assembly/wing-blank/index"
+    }
+}

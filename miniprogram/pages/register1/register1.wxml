@@ -1,0 +1,31 @@
+<view id="container"> 
+ <view id="login_box">
+   <view id="LOGIN">缘来是你</view>
+   <view id="form">
+     <view id="input_box">
+       <image class="icon" src="/icon/账号.png" mode="widthFix"></image>
+       <input type="text" placeholder="账号" placeholder-style="color:#FFFFFF"  bindinput="usernameinput" />
+     </view> 
+   <view>
+     <view id="input_box">
+       <image class="icon" src="/icon/密码.png" mode="widthFix"></image>
+       <input type="password" placeholder="密码" placeholder-style="color:#FFFFFF" type="password" bindinput="passwordinput"/>
+     </view>
+     <view id="input_box">
+       <image class="icon" src="/icon/密码.png" mode="widthFix"></image>
+       <input type="password" placeholder="请确认密码" placeholder-style="color:#FFFFFF" type="password" bindinput="passwordconfirminput" />
+    </view>
+     </view>
+     <view id="input_box">
+       <image class="icon" src="/icon/邮箱.png" mode="widthFix"></image>
+       <input type="password" placeholder="邮箱" placeholder-style="color:#FFFFFF" type="email" bindinput="emailinput"/>
+     </view>
+   </view>
+   <view class="signin">
+      <button type="submit" catchtap="signin">注册</button>
+    </view>
+    <view id="sign_up">
+    忘记密码？
+    </view>
+ </view>
+</view>

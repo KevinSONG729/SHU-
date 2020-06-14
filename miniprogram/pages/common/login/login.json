@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "usingComponents": {
+        "wux-icon": "../../../assembly/icon/index",
+        "wux-button": "../../../assembly/button/index"
+    }
+}

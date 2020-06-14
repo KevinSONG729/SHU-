@@ -1,0 +1,15 @@
+<button appParameter="{{appParameter}}" bindcontact="bindcontact" binderror="onError" bindgetphonenumber="bindgetphonenumber" bindgetuserinfo="bindgetuserinfo" bindopensetting="bindopensetting" bindtap="onTap" class="wux-class wux-cell {{isLast?'wux-cell--last':''}} {{isLink?'wux-cell--access':''}} {{disabled?'wux-cell--disabled':''}}" disabled="{{disabled}}" hoverClass="{{!disabled?hoverClass:'none'}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" lang="{{lang}}" openType="{{openType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}">
+    <view class="wux-cell__hd">
+        <image class="wux-cell__thumb" src="{{thumb}}" wx:if="{{thumb}}"></image>
+        <slot name="header" wx:else></slot>
+    </view>
+    <view class="wux-cell__bd">
+        <view class="wux-cell__text" wx:if="{{title}}">{{title}}</view>
+        <view class="wux-cell__desc" wx:if="{{label}}">{{label}}</view>
+        <slot></slot>
+    </view>
+    <view class="wux-cell__ft">
+        <block wx:if="{{extra}}">{{extra}}</block>
+        <slot name="footer" wx:else></slot>
+    </view>
+</button>

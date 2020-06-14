@@ -1,0 +1,18 @@
+<view class="wux-class wux-textarea {{hasCount?'wux-textarea--has-count':''}} {{inputFocus?'wux-textarea--focus':''}} {{disabled?'wux-textarea--disabled':''}} {{error?'wux-textarea--error':''}}">
+    <view class="wux-textarea__label" wx:if="{{label}}">{{label}}</view>
+    <slot wx:else></slot>
+    <view class="wux-textarea__control">
+        <textarea adjustPosition="{{adjustPosition}}" autoHeight="{{autoHeight}}" bindblur="onBlur" bindconfirm="onConfirm" bindfocus="onFocus" bindinput="onChange" bindlinechange="onLineChange" class="wux-textarea__item" cursor="{{cursor}}" cursorSpacing="{{cursorSpacing}}" disabled="{{disabled}}" fixed="{{fixed}}" focus="{{inputFocus}}" maxlength="{{maxlength}}" placeholder="{{placeholder}}" placeholderClass="{{placeholderClass}}" placeholderStyle="{{placeholderStyle}}" selectionEnd="{{selectionEnd}}" selectionStart="{{selectionStart}}" showConfirmBar="{{showConfirmBar}}" style="{{inputRows>1&&!!inputHeight?'height: '+inputHeight+'px':''}}" value="{{inputValue}}"></textarea>
+    </view>
+    <view bindtap="onClear" class="wux-textarea__clear" wx:if="{{clear&&!disabled&&inputValue&&inputValue.length>0}}">
+        <icon color="#B2B2B2" size="14" type="clear"></icon>
+    </view>
+    <view bindtap="onError" class="wux-textarea__error" wx:if="{{error}}">
+        <icon color="#ef473a" size="14" type="warn"></icon>
+    </view>
+    <view class="wux-textarea__extra" wx:if="{{extra}}">{{extra}}</view>
+    <slot name="footer" wx:else></slot>
+    <view class="wux-textarea__count" wx:if="{{hasCount}}">
+        <text class="wux-textarea__current">{{inputValue.length}}</text>/{{maxlength===-1?'∞':maxlength}}
+	</view>
+</view>

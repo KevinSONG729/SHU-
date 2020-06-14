@@ -1,0 +1,4 @@
+.btn_box {
+    width: 92%;
+    padding: 4%;
+}

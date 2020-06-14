@@ -1,0 +1,17 @@
+<view class="bg">
+  <view class="lovedots">
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+<view class="btn">
+<text class="btn1" bindtap="changeToFirst">开启旅程</text>
+</view>
+
+</view>

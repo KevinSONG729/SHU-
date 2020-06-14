@@ -1,0 +1,31 @@
+<view class="wux-class wux-slider {{disabled?'wux-slider--disabled':''}}" style="{{wrapStyle}}">
+    <view class="wux-slider__min" wx:if="{{common.getValue(showValue,'min')}}">{{min}}</view>
+    <view class="wux-slider__rail" style="{{railStyle}}">
+        <view class="wux-slider__mark" style="left: {{item+'%'}}; {{common.getStyle(markStyle,index)}}" wx:if="{{showMark&&marks.length>0}}" wx:for="{{marks}}"></view>
+        <block wx:for="{{sliderValue}}">
+            <view class="wux-slider__track" style="{{common.getTrackStyle(offsets,index,sliderValue.length>1)}}; {{common.getStyle(trackStyle,index)}}" wx:if="{{sliderValue.length===1||index!==sliderValue.length-1}}"></view>
+            <view bindtouchend="onTouchEnd" bindtouchmove="onTouchMove" bindtouchstart="onTouchStart" class="wux-slider__handle {{last===index?'wux-slider__handle--last':''}}" data-index="{{index}}" style="left: {{offsets[index]+'%'}}; {{common.getStyle(handleStyle,index)}}"></view>
+        </block>
+    </view>
+    <view class="wux-slider__max" wx:if="{{common.getValue(showValue,'max')}}">{{max}}</view>
+</view>
+<wxs module="common">
+module.exports.getTrackStyle = (function(offsets, index, multiple) {
+    if (!multiple) {
+        return ('width: ' + offsets[((nt_0 = (index), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))] + '%')
+    };
+    return ('left: ' + offsets[((nt_1 = (index), null == nt_1 ? undefined : 'number' === typeof nt_1 ? nt_1 : "" + nt_1))] + '%; width: ' + (offsets[((nt_2 = (index + 1), null == nt_2 ? undefined : 'number' === typeof nt_2 ? nt_2 : "" + nt_2))] - offsets[((nt_3 = (index), null == nt_3 ? undefined : 'number' === typeof nt_3 ? nt_3 : "" + nt_3))]) + '%')
+});
+module.exports.getStyle = (function(style, index) {
+    if (style.constructor !== 'String') {
+        return (style[((nt_4 = (index), null == nt_4 ? undefined : 'number' === typeof nt_4 ? nt_4 : "" + nt_4))])
+    };
+    return (style)
+});
+module.exports.getValue = (function(obj, name) {
+    if (obj.constructor === 'Object') {
+        return (obj[((nt_5 = (name), null == nt_5 ? undefined : 'number' === typeof nt_5 ? nt_5 : "" + nt_5))])
+    };
+    return (obj)
+});
+</wxs>

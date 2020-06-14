@@ -1,0 +1,11 @@
+<view class="wux-backdrop--transparent" wx:if="{{backdrop&&buttonVisible}}"></view>
+<view catchtap="onToggle" class="wux-class wux-speed-dial {{position?'wux-speed-dial--'+position:''}} {{theme?'wux-speed-dial--'+theme:''}} {{buttonVisible?'wux-speed-dial--opened':''}}">
+    <view class="wux-speed-dial__action" hoverClass="wux-speed-dial__action--hover">
+        <image class="wux-speed-dial__text {{buttonVisible&&actionRotate?'wux-speed-dial__text--rotate':''}}" src="{{action}}"></image>
+    </view>
+    <view class="wux-speed-dial__buttons" wx:if="{{buttons.length}}">
+        <button appParameter="{{button.appParameter}}" bindcontact="bindcontact" binderror="onError" bindgetphonenumber="bindgetphonenumber" bindgetuserinfo="bindgetuserinfo" bindopensetting="bindopensetting" catchtap="onTap" class="wux-speed-dial__button {{button.label?'wux-speed-dial__button--label':''}} {{button.disabled?'wux-speed-dial__button--disabled':''}} {{button.className}}" data-index="{{index}}" data-label="{{button.label}}" data-value="{{button}}" disabled="{{button.disabled}}" hoverClass="{{!button.disabled?button.hoverClass||'wux-speed-dial__button--hover':'none'}}" hoverStartTime="{{button.hoverStartTime}}" hoverStayTime="{{button.hoverStayTime}}" hoverStopPropagation="{{button.hoverStopPropagation}}" lang="{{button.lang}}" openType="{{button.openType}}" sendMessageImg="{{button.sendMessageImg}}" sendMessagePath="{{button.sendMessagePath}}" sendMessageTitle="{{button.sendMessageTitle}}" sessionFrom="{{button.sessionFrom}}" showMessageCard="{{button.showMessageCard}}" style="transition-delay: {{index*50+'ms'}}" wx:for="{{buttons}}" wx:for-item="button" wx:key="index">
+            <image class="wux-speed-dial__icon" src="{{button.icon}}"></image>
+        </button>
+    </view>
+</view>

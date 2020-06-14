@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "附近的人",
+    "onReachBottomDistance": 50,
+    "usingComponents": {
+        "wux-card": "../../../assembly/card/index",
+        "wux-wing-blank": "../../../assembly/wing-blank/index",
+        "wux-divider": "../../../assembly/divider/index"
+    }
+}

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/introduce/introduce",
+    "pages/tabBar/home/home",
+    "pages/matchSuccess/matchSuccess",
+    "pages/my/resume/resume",
+    "pages/tabBar/my/my",
+    "pages/common/login/login",
+    "pages/tabBar/release/release",
+    "pages/release/job_release/job_release",
+    "pages/position/nearby_position/nearby_position",
+    "pages/common/result/result",
+    "pages/common/phone_check/phone_check",
+    "pages/my/resume/basic/basic",
+    "pages/my/resume/class/class",
+    "pages/my/resume/textarea/textarea",
+    "pages/tabBar/im/card/card",
+    "pages/tabBar/im/room/room"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "SHU缘起",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#AAA",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/im/card/card",
+        "text": "树洞",
+        "iconPath": "public/icon/star-0.png",
+        "selectedIconPath": "public/icon/star.png"
+      },
+      {
+        "pagePath": "pages/tabBar/home/home",
+        "text": "首页",
+        "iconPath": "public/icon/love-0.png",
+        "selectedIconPath": "public/icon/love.png"
+      },
+      
+      {
+        "pagePath": "pages/tabBar/my/my",
+        "text": "用户",
+        "iconPath": "public/icon/person-0.png",
+        "selectedIconPath": "public/icon/person.png"
+      }
+    ]
+  },
+  "enablePullDownRefresh": true,
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置信息将用于小程序接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

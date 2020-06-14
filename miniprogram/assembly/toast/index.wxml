@@ -1,0 +1,7 @@
+<wux-backdrop transparent id="wux-backdrop" wx:if="{{mask}}"></wux-backdrop>
+<wux-animation-group classNames="wux-animate--fadeIn" in="{{in}}" wuxClass="wux-toast">
+    <view class="wux-toast__content {{icon?'wux-toast__content--has-icon':''}}">
+        <wux-icon color="{{color}}" size="55" type="{{icon}}" wuxClass="wux-toast__icon" wx:if="{{icon}}"></wux-icon>
+        <view class="wux-toast__text">{{text}}</view>
+    </view>
+</wux-animation-group>

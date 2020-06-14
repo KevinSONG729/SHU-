@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "",
+    "disableScroll": true,
+    "usingComponents": {
+        "wux-cell-group": "../../../../assembly/cell-group/index",
+        "wux-cell": "../../../../assembly/cell/index",
+        "wux-textarea": "../../../../assembly/textarea/index"
+    }
+}

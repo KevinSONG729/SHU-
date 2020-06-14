@@ -1,0 +1,68 @@
+<view class="page">
+    <view class="top_hurdle">
+        <view class="hurdle_left">
+            <image mode="fataspectFit" src="/public/icon/location.png"></image>
+            <text>上海市宝山区上大路</text>
+        </view>
+        <view class="hurdle_right">
+            <view class="right_seach">
+                <image mode="fataspectFit" src="/public/icon/search.png"></image>搜索
+            </view>
+        </view>
+    </view>
+    <view class="notice">
+        <wux-notice-bar loop content="{{notice}}" speed="100"></wux-notice-bar>
+    </view>
+    
+    <view class="shortcut">
+        <view>
+            <image mode="aspectFit" src="/public/icon/information.png" style="width:40px;height:40px"></image>
+            <text>个人信息</text>
+        </view>
+        <view>
+            <image mode="aspectFit" src="/public/icon/couple.png" style="width:40px;height:40px"></image>
+            <text>心动的ta</text>
+        </view>
+        <view>
+            <image mode="aspectFit" src="/public/icon/message.png" style="width:40px;height:40px"></image>
+            <text>匹配消息</text>
+        </view>
+    </view>
+    <view class="start-match" bindtap="toMatchSuccess">
+        <image mode="aspectFit" src="/public/icon/start.png" style="width:60px;height:60px"></image>
+        <text class="pipei">开始匹配</text>
+    </view>
+    <view class="nearby_title">
+        <view>
+            <image mode="aspectFit" src="../../../public/icon/nearby.png" style="width:16px;height:16px"></image>
+            <text>附近的人</text>
+        </view>
+        <view>
+            <text bindtap="openUrl">查看更多</text>
+            <image mode="aspectFit" src="../../../public/icon/right_tip.png" style="width:20px;height:20px"></image>
+        </view>
+    </view>
+    <view class="nearby_data">
+        <wux-wing-blank size="default" wx:for="{{nearby}}" wx:key="index">
+            <wux-card bordered="{{false}}" extra="{{item.refresh_time}}" thumbStyle="width:20px;height:20px" title="{{item.position_title}}">
+                <view class="list_center" slot="body">
+                    <view class="list_center_left">
+                        <view>{{item.type}}/{{item.salary_type}}/{{item.worker_time}}小时制</view>
+                    </view>
+                    <view class="list_center_right">
+                        <text>{{item.salary}}</text>
+                    </view>
+                </view>
+                <view class="list_bottom" slot="footer">
+                    <view>
+            已有{{item.apply}}人申请了该工作
+          </view>
+                    <view>
+            {{item.views}}浏览｜{{item.distance}}km
+          </view>
+                </view>
+            </wux-card>
+        </wux-wing-blank>
+    </view>
+    
+</view>

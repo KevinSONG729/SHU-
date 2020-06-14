@@ -1,0 +1,14 @@
+<view class="wux-class wux-search-bar {{inputFocus?'wux-search-bar--focus':''}} {{disabled?'wux-search-bar--disabled':''}}">
+    <view class="wux-search-bar__form">
+        <view class="wux-search-bar__box">
+            <icon class="wux-search-bar__search" color="#B2B2B2" size="14" type="search"></icon>
+            <input adjustPosition="{{adjustPosition}}" bindblur="onBlur" bindconfirm="onConfirm" bindfocus="onFocus" bindinput="onChange" class="wux-search-bar__input" confirmHold="{{confirmHold}}" confirmType="{{confirmType}}" cursor="{{cursor}}" cursorSpacing="{{cursorSpacing}}" disabled="{{disabled}}" focus="{{inputFocus}}" maxlength="{{maxlength}}" placeholder="{{placeholder}}" placeholderClass="{{placeholderClass}}" placeholderStyle="{{placeholderStyle}}" selectionEnd="{{selectionEnd}}" selectionStart="{{selectionStart}}" type="text" value="{{inputValue}}"></input>
+            <icon bindtap="onClear" class="wux-search-bar__clear" color="#B2B2B2" size="14" type="clear" wx:if="{{clear&&!disabled&&inputValue&&inputValue.length>0}}"></icon>
+        </view>
+        <label bindtap="onClick" class="wux-search-bar__label" wx:if="{{!inputFocus&&!inputValue}}">
+            <icon class="wux-search-bar__icon" color="#B2B2B2" size="14" type="search"></icon>
+            <text class="wux-search-bar__text">{{placeholder}}</text>
+        </label>
+    </view>
+    <view bindtap="onCancel" class="wux-search-bar__cancel" wx:if="{{showCancel||inputFocus||inputValue&&inputValue.length>0}}">{{cancelText}}</view>
+</view>

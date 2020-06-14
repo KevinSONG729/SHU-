@@ -1,0 +1,14 @@
+.wux-wingblank--small {
+    margin: 10px;
+}
+
+.wux-wingblank--default {
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #DDD;
+}
+
+.wux-wingblank--large {
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}

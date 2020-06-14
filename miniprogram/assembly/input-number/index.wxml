@@ -1,0 +1,9 @@
+<view class="wux-class wux-input-number {{shape?'wux-input-number--'+shape:''}}">
+    <view bindlongpress="bindlongpress" bindtap="bindtap" bindtouchend="bindtouchend" class="wux-sub-class wux-input-number__selector wux-input-number__selector--sub {{color?'wux-input-number__selector--'+color:''}} {{disabledMin?'wux-input-number__selector--disabled':''}}" data-type="sub" touchcancel="touchcancel">
+        <wux-icon type="ios-remove" wuxClass="wux-input-number__icon"></wux-icon>
+    </view>
+    <input bindblur="bindblur" bindfocus="bindfocus" bindinput="bindinput" class="wux-input-class wux-input-number__input" disabled="{{disabled}}" type="number" value="{{inputValue}}"></input>
+    <view bindlongpress="bindlongpress" bindtap="bindtap" bindtouchend="bindtouchend" class="wux-add-class wux-input-number__selector wux-input-number__selector--add {{color?'wux-input-number__selector--'+color:''}} {{disabledMax?'wux-input-number__selector--disabled':''}}" data-type="add" touchcancel="touchcancel">
+        <wux-icon type="ios-add" wuxClass="wux-input-number__icon"></wux-icon>
+    </view>
+</view>

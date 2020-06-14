@@ -1,0 +1,13 @@
+.location {
+    width: 67%;
+    text-align: right;
+}
+
+.input {
+    width: 100%!important;
+}
+
+.btn_box {
+    width: 92%;
+    padding: 4%;
+}

@@ -1,0 +1,25 @@
+
+<!-- message sender -->
+  <view class="top">
+<image src="{{userInfo.avatarUrl}}" class="image" mode="widthFix" />
+  </view>
+  <view class="footer">
+    <view class="message-sender" wx:if="{{userInfo}}">
+      <input 
+        class="text-input"
+        type="text"
+        confirm-type="send"
+        bindconfirm="onConfirmSendText"
+        cursor-spacing="20"
+        value="{{textInputValue}}"
+        placeholder="{{userInfo.nickName}},欢迎在树洞留言！！"
+      ></input>
+    </view>
+    <view class="message-sender" wx:if="{{!userInfo}}">
+      <button 
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo"
+      >请先登录后参与聊天</button>
+    </view>
+  </view>

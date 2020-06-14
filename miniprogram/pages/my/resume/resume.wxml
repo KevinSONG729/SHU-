@@ -1,0 +1,128 @@
+<view class="page">
+    <view class="basic head">
+        <view class="head_left">
+            <view class="font24">
+            <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">基本信息</text>
+            </view>
+            <view class="{{resumeInfo.name==''?'hide':'show'}}">{{resumeInfo.sex}}/{{resumeInfo.age}}/{{resumeInfo.area}}/{{resumeInfo.is_marry}}/{{resumeInfo.education}}</view>
+            <view class="{{resumeInfo.phone==''?'hide':'show'}}">
+                <image mode="aspectFill" src="../../../public/icon/icon-phone.png" style="width:24px;height:24px"></image>
+                <text>{{resumeInfo.phone}}</text>
+            </view>
+            <view class="{{resumeInfo.email==''?'hide':'show'}}">
+                <image mode="aspectFill" src="../../../public/icon/icon-mail.png" style="width:24px;height:24px"></image>
+                <text>{{resumeInfo.email}}</text>
+            </view>
+            <view class="{{resumeInfo.wechat_id==''?'hide':'show'}}">
+                <image mode="aspectFill" src="../../../public/icon/icon-wechat.png" style="width:24px;height:24px"></image>
+                <text>{{resumeInfo.wechat_id}}</text>
+            </view>
+        </view>
+        <view class="head_right">
+            <image bindtap="openUrl" data-url="basic" mode="aspectFill" src="../../../public/icon/pen.png" style="width:30px;height:30px"></image>
+        </view>
+    </view>
+    <view class="basic training">
+        <view class="title">
+            <view>
+                <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">自我评价</text>
+            </view>
+            <view>
+                <image bindtap="openUrl" data-model="evaluation" data-title="自我评价" data-url="textarea" mode="aspectFill" src="../../../public/icon/pen.png" style="width:30px;height:30px"></image>
+            </view>
+        </view>
+        <view class="body" style="border-bottom:0px;">
+            <view class="body_left" style="width:100%;">
+                <text class="font14">{{resumeInfo.evaluation}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="basic work">
+        <view class="title">
+            <view>
+                <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">希望的ta</text>
+            </view>
+        </view>
+        <view class="body" wx:for="{{resumeInfo.workExperience}}" wx:key="index">
+            <view class="body_left">
+                <text class="font14">{{item.title}}</text>
+                <text class="font14">{{item.name}}</text>
+                <text class="font14">{{item.start_date}} ~ {{item.end_date}}</text>
+                <text class="font14" style="color:#AAA">工作内容:</text>
+                <text class="font14">{{item.describe}}</text>
+            </view>
+            <view class="body_right">
+                <image bindtap="openUrl" data-experienceId="{{item.experienceId}}" data-id="1" data-url="class" mode="aspectFill" src="../../../public/icon/pen.png" style="width:30px;height:30px"></image>
+            </view>
+        </view>
+        <view class="add_data">
+            <image mode="aspectFill" src="../../../public/icon/加.png" style="width:26px;height:26px"></image>
+            <text bindtap="openUrl" class="font14" data-id="1" data-url="class">添加希望的ta</text>
+        </view>
+    </view>
+    <view class="basic project">
+        <view class="title">
+            <view>
+                <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">个人标签</text>
+            </view>
+        </view>
+        <view class="body" wx:for="{{resumeInfo.projectExperience}}" wx:key="index">
+            <view class="body_left">
+                <text class="font14">{{item.title}}</text>
+                <text class="font14">{{item.start_date}} ~ {{item.end_date}}</text>
+                <text class="font14" style="color:#AAA">工作内容:</text>
+                <text class="font14">{{item.describe}}</text>
+            </view>
+            <view class="body_right">
+                <image bindtap="openUrl" data-experienceId="{{item.experienceId}}" data-id="2" data-url="class" mode="aspectFill" src="../../../public/icon/icon-edit.png" style="width:30px;height:30px"></image>
+            </view>
+        </view>
+        <view class="add_data">
+            <image mode="aspectFill" src="../../../public/icon/加.png" style="width:26px;height:26px"></image>
+            <text bindtap="openUrl" class="font14" data-id="2" data-url="class">添加个人标签</text>
+        </view>
+    </view>
+    <view class="basic education">
+        <view class="title">
+            <view>
+                <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">成长经历</text>
+            </view>
+        </view>
+        <view class="body" wx:for="{{resumeInfo.educationExperience}}" wx:key="index">
+            <view class="body_left">
+                <text class="font14">{{item.title}}</text>
+                <text class="font14">{{item.name}}</text>
+                <text class="font14">{{item.start_date}} ~ {{item.end_date}}</text>
+            </view>
+            <view class="body_right">
+                <image bindtap="openUrl" data-experienceId="{{item.experienceId}}" data-id="3" data-url="class" mode="aspectFill" src="../../../public/icon/icon-edit.png" style="width:30px;height:30px"></image>
+            </view>
+        </view>
+        <view class="add_data">
+            <image mode="aspectFill" src="../../../public/icon/加.png" style="width:26px;height:26px"></image>
+            <text bindtap="openUrl" class="font14" data-id="3" data-url="class">添加成长经历</text>
+        </view>
+    </view>
+    
+    <view class="basic training">
+        <view class="title">
+            <view>
+                <image mode="aspectFill" src="../../../public/icon/小窗.png" style="width:20px;height:20px;margin-right:4px;"></image>
+                <text class="font18">联系客服</text>
+            </view>
+            <view>
+                <image bindtap="openUrl" data-model="honor" data-title="联系客服" data-url="textarea" mode="aspectFill" src="../../../public/icon/pen.png" style="width:30px;height:30px"></image>
+            </view>
+        </view>
+        <view class="body" style="border-bottom:0px;">
+            <view class="body_left" style="width:100%;">
+                <text class="font14">{{resumeInfo.honor}}</text>
+            </view>
+        </view>
+    </view>
+</view>

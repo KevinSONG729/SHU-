@@ -1,0 +1,30 @@
+<!--pages/im/card/card.wxml-->
+<view class="container">
+<view class="buttonset"><view class="button" bindtap="writeContents">+</view></view>
+<view class="personal_card" wx:for="{{chat}}">
+    <view class="introduction">
+        <view class="head">
+                <image class="image"  mode="widthFix" src="{{item.avatar}}"/>
+                <view class="name_place">
+                    <view class="name" >{{item.nickName}}</view>
+                    <view class="place" >{{item.country}}-{{item.province}}-{{item.city}}</view>
+                </view>
+        </view>
+            <view class="details">
+                <text class="text">{{item.textContent}}</text>
+            </view>
+        <view class="others">
+            <view class="nice_comments">
+                <view class="nice">
+                    <image class="image_nice" mode="widthFix" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
+                    <text class="text_nice">...</text>
+                </view>
+                <view class="comments">
+                    <image class="image_comments" mode="widthFix" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
+                    <text class="text_comments">...</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

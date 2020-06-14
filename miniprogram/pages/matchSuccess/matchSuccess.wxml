@@ -1,0 +1,13 @@
+<!--pages/matchSuccess/matchSuccess.wxml-->
+<view class="page">
+	<view class="text">匹配成功！</view>
+	<view class="avatar">
+		<view class="avatar-item" style="background-image:url('/public/images/avatar1.jpg')"></view>
+		<view class="avatar-item avatar-match" style="background-image:url('/public/images/match.jpg')"></view>
+		<view class="avatar-item" style="background-image:url('/public/images/avatar2.jpg')"></view>
+	</view>
+  <view class="button">
+    <button class="button-item">聊天</button>
+    <button class="button-item">要礼物</button>
+  </view>
+</view>

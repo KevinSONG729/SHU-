@@ -1,0 +1,11 @@
+{
+    "disableScroll": true,
+    "navigationBarTitleText": "用户",
+    "usingComponents": {
+        "wux-cell-group": "../../../assembly/cell-group/index",
+        "wux-cell": "../../../assembly/cell/index",
+        "wux-floating-button": "../../../assembly/floating-button/index",
+        "wux-avatar": "../../../assembly/avatar/index",
+        "wux-badge": "../../../assembly/badge/index"
+    }
+}

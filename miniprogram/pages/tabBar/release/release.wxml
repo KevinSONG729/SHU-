@@ -1,0 +1,7 @@
+<view class="page">
+    <view class="body">
+        <wux-button block bindtap="_goto" data-type="0" size="large" type="energized">个人兼职发布</wux-button>
+        <wux-button block bindtap="_goto" data-type="1" size="large" type="energized">企业兼职发布</wux-button>
+        <wux-button block bindtap="_goto" data-type="2" size="large" type="energized">企业全职发布</wux-button>
+    </view>
+</view>

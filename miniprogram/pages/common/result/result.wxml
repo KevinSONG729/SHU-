@@ -1,0 +1,3 @@
+<view>
+    <wux-result fixed bind:click="onClick" buttons="{{buttons}}" extra="" icon="{{icon}}" label="提交成功需通过审核才能正式发布出来" title="提交成功"></wux-result>
+</view>

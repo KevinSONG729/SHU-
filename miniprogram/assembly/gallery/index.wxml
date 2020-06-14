@@ -1,0 +1,13 @@
+<wux-animation-group classNames="wux-animate--slideInRight" in="{{in}}" wuxClass="wux-gallery">
+    <swiper autoplay="{{autoplay}}" bindchange="onChange" circular="{{circular}}" class="wux-gallery__swiper" current="{{current}}" duration="{{duration}}" indicatorActiveColor="{{indicatorActiveColor}}" indicatorColor="{{indicatorColor}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" vertical="{{vertical}}" wx:if="{{in&&images.length}}">
+        <swiper-item class="wux-gallery__item" wx:for="{{images}}" wx:key="index">
+            <image bindtap="onTap" bindtouchend="onTouchEnd" bindtouchmove="onTouchMove" bindtouchstart="onTouchStart" class="wux-gallery__img" data-index="{{index}}" data-touch="{{item.touch}}" mode="aspectFit" src="{{item.image}}" style="transform: scale({{item.touch.scale}}); transition: {{transition||'none'}}"></image>
+            <view class="wux-gallery__remark {{current===index?'wux-gallery__remark--active':''}}" wx:if="{{item.remark}}">{{item.remark}}</view>
+        </swiper-item>
+    </swiper>
+    <view bindtap="onDelete" class="wux-gallery__opr" wx:if="{{showDelete}}">
+        <view class="wux-gallery__del">
+            <view class="wux-gallery__icon"></view>
+        </view>
+    </view>
+</wux-animation-group>

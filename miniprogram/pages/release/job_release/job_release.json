@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "职位发布",
+    "usingComponents": {
+        "wux-cell-group": "../../../assembly/cell-group/index",
+        "wux-checkbox-group": "../../../assembly/checkbox-group/index",
+        "wux-cell": "../../../assembly/cell/index",
+        "wux-input": "../../../assembly/input/index",
+        "wux-textarea": "../../../assembly/textarea/index",
+        "wux-button": "../../../assembly/button/index",
+        "wux-checkbox": "../../../assembly/checkbox/index",
+        "wux-notification": "../../../assembly/notification/index",
+        "wux-result": "../../../assembly/result/index"
+    }
+}

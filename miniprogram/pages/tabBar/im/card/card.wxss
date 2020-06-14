@@ -1,0 +1,110 @@
+.container{
+  height: auto;
+  width: 100%;
+  background-image: url("https://ae01.alicdn.com/kf/H045040eaedbe43bc9b359c7efedac558k.jpg");
+  /*https://pics.images.ac.cn/image/5ee5b60aec6ab.html*/
+  align-items: center;
+  background-size:contain;
+}
+
+.buttonset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.button{
+  font-size: 34px;
+  color: aliceblue;
+  width: 15%;
+  background-color: #ffffff70;
+  text-align: center;
+  border-radius: 40%;
+}
+
+.personal_card{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  display: flex;
+  background-color: #ffffff75;
+  display: flex;
+  border-radius:2%;
+  padding: 5px;
+}
+.introduction{
+ width: 100%;
+}
+.head{
+ width: 90%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 2%;
+ padding: 2%;
+ height: 20%;
+ display: flex;
+}
+.image{
+  width: 17%;
+  border-radius: 50%;
+  margin-right: 7%;
+}
+.name_place{
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  font-size: larger;
+}
+.place{
+  font-size: small;
+  color: rgb(187, 187, 187);
+}
+.details{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: rgb(72, 72, 72) solid 1px;
+  font-size: 14px;
+  font-weight: 560;
+  text-align: justify;
+}
+.others{
+  width: 90%;
+  display: flex;
+  margin-top: 5%;
+  padding-left: 5%;
+}
+.nice_comments{
+  width: 100%;
+  display: flex;
+}
+.nice{
+  width: 25%;
+}
+.comments{
+  width: 25%;
+}
+.image_nice{
+  width: 40%;
+}
+.text_nice{
+  font-size: 11px;
+  padding-left: 2%;
+  padding-right: 4%;
+}
+.image_comments{
+  width: 40%;
+  margin-top: 4px;
+}
+.text_comments{
+  font-size: 12px;
+  padding-left: 2%;
+  padding-right: 4%;
+  margin-top: 4px;
+}

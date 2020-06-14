@@ -1,0 +1,15 @@
+<wux-backdrop bind:click="cancel" id="wux-backdrop"></wux-backdrop>
+<wux-animation-group classNames="wux-animate--slideInUp" in="{{in}}" wuxClass="wux-actionsheet">
+    <view class="wux-actionsheet__content {{theme==='wx'?'wux-actionsheet__content--theme-wx':''}}">
+        <view class="wux-actionsheet__group wux-actionsheet__group--options">
+            <view class="wux-actionsheet__title" wx:if="{{titleText}}">{{titleText}}</view>
+            <button catchtap="buttonClicked" class="wux-actionsheet__button wux-actionsheet__button--option {{item.classNmae}}" data-index="{{index}}" hoverClass="wux-actionsheet__button--hover" wx:for="{{buttons}}">
+                    {{item.text}}
+                </button>
+            <button catchtap="destructiveButtonClicked" class="wux-actionsheet__button wux-actionsheet__button--destructive" wx:if="{{destructiveText}}">{{destructiveText}}</button>
+        </view>
+        <view class="wux-actionsheet__group wux-actionsheet__group--cancel" wx:if="{{cancelText}}">
+            <button catchtap="cancel" class="wux-actionsheet__button wux-actionsheet__button--cancel" hoverClass="wux-actionsheet__button--hover">{{cancelText}}</button>
+        </view>
+    </view>
+</wux-animation-group>

@@ -1,0 +1,22 @@
+<view class="wux-class wux-result {{fixed?'wux-result--fixed':''}}">
+    <view class="wux-result__hd">
+        <view class="wux-result__icon" wx:if="{{resultIcon}}">
+            <icon color="{{resultIcon.color}}" size="{{resultIcon.size}}" type="{{resultIcon.type}}"></icon>
+        </view>
+        <slot name="header" wx:else></slot>
+    </view>
+    <view class="wux-result__bd">
+        <view class="wux-result__title" wx:if="{{title}}">{{title}}</view>
+        <view class="wux-result__desc" wx:if="{{label}}">{{label}}</view>
+        <view class="wux-result__buttons" wx:if="{{buttons.length}}">
+            <wux-button appParameter="{{button.appParameter}}" bind:click="onClick" bind:contact="bindcontact" bind:getphonenumber="bindgetphonenumber" bind:getuserinfo="bindgetuserinfo" binderror="onError" bindopensetting="bindopensetting" block="{{button.block}}" clear="{{button.clear}}" data-index="{{index}}" disabled="{{button.disabled}}" formType="{{button.formType}}" full="{{button.full}}" hoverStartTime="{{button.hoverStartTime}}" hoverStayTime="{{button.hoverStayTime}}" hoverStopPropagation="{{button.hoverStopPropagation}}" lang="{{button.lang}}" loading="{{button.loading}}" openType="{{button.openType}}" outline="{{button.outline}}" sendMessageImg="{{button.sendMessageImg}}" sendMessagePath="{{button.sendMessagePath}}" sendMessageTitle="{{button.sendMessageTitle}}" sessionFrom="{{button.sessionFrom}}" showMessageCard="{{button.showMessageCard}}" size="{{button.size}}" type="{{button.type}}" wx:for="{{buttons}}" wx:for-item="button" wx:key="index">
+                    {{button.text}}
+                </wux-button>
+        </view>
+        <slot></slot>
+    </view>
+    <view class="wux-result__ft">
+        <text wx:if="{{extra}}">{{extra}}</text>
+        <slot name="footer" wx:else></slot>
+    </view>
+</view>

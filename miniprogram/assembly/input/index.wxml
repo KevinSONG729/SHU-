@@ -1,0 +1,15 @@
+<view class="wux-class wux-input {{inputFocus?'wux-input--focus':''}}{{error?'wux-input--error':''}}">
+    <view class="wux-input__label" wx:if="{{label}}">{{label}}</view>
+    <slot wx:else></slot>
+    <view class="wux-input__control">
+        <input adjustPosition="{{adjustPosition}}" bindblur="onBlur" bindconfirm="onConfirm" bindfocus="onFocus" bindinput="onChange" class="wux-input__item" confirmHold="{{confirmHold}}" confirmType="{{confirmType}}" cursor="{{cursor}}" cursorSpacing="{{cursorSpacing}}" disabled="{{disabled}}" focus="{{inputFocus}}" maxlength="{{maxlength}}" name="{{name}}" password="{{password}}" placeholder="{{placeholder}}" placeholderClass="{{placeholderClass}}" placeholderStyle="{{placeholderStyle}}" selectionEnd="{{selectionEnd}}" selectionStart="{{selectionStart}}" type="{{type}}" value="{{inputValue}}"></input>
+    </view>
+    <view bindtap="onClear" class="wux-input__clear" wx:if="{{clear&&!disabled&&inputValue&&inputValue.length>0}}">
+        <icon color="#B2B2B2" size="14" type="clear"></icon>
+    </view>
+    <view bindtap="onError" class="wux-input__error" wx:if="{{error}}">
+        <icon color="#ef473a" size="14" type="warn"></icon>
+    </view>
+    <view class="wux-input__extra" wx:if="{{extra}}">{{extra}}</view>
+    <slot name="footer" wx:else></slot>
+</view>

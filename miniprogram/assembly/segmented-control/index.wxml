@@ -1,0 +1,3 @@
+<view class="wux-class wux-segment {{theme?'wux-segment--'+theme:''}} {{disabled?'wux-segment--disabled':''}}" wx:if="{{values.length}}">
+    <view bindtap="onTap" class="wux-segment-item {{activeKey===index?'wux-segment-item--current':''}}" data-index="{{index}}" wx:for="{{values}}" wx:key="index">{{item}}</view>
+</view>

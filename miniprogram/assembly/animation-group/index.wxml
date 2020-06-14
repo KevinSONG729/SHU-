@@ -1,0 +1,3 @@
+<view bindanimationend="onAnimationEnd" bindtap="onTap" bindtransitionend="onTransitionEnd" class="wux-class {{animateCss}}" style="{{wrapStyle}}" wx:if="{{animateStatus!=='unmounted'}}">
+    <slot></slot>
+</view>

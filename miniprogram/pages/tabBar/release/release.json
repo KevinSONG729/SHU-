@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "navigationBarTitleText": "发布",
+    "usingComponents": {
+        "wux-button": "../../../assembly/button/index"
+    }
+}

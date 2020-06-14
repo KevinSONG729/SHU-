@@ -1,0 +1,6 @@
+<view class="wux-class wux-circle" style="{{style}}">
+    <canvas canvasId="circle" style="{{style}}"></canvas>
+    <view class="wux-circle__inner">
+        <slot></slot>
+    </view>
+</view>

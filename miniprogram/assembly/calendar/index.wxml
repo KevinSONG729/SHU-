@@ -1,0 +1,46 @@
+<wux-popup bind:close="close" position="bottom" visible="{{in}}" zIndex="1010">
+    <view class="wux-class wux-calendar {{direction?'wux-calendar--'+direction:''}}">
+        <view class="wux-calendar__content">
+            <view class="wux-calendar__hd" wx:if="{{toolbar}}">
+                <view class="wux-calendar__toolbar">
+                    <view class="wux-calendar__picker">
+                        <view bindtap="prevMonth" class="wux-calendar__link">
+                            <view class="wux-calendar__icon wux-calendar__icon--prev"></view>
+                        </view>
+                        <view class="wux-calendar__value">{{currentMonthName}}</view>
+                        <view bindtap="nextMonth" class="wux-calendar__link">
+                            <view class="wux-calendar__icon wux-calendar__icon--next"></view>
+                        </view>
+                    </view>
+                    <view class="wux-calendar__picker">
+                        <view bindtap="prevYear" class="wux-calendar__link">
+                            <view class="wux-calendar__icon wux-calendar__icon--prev"></view>
+                        </view>
+                        <text class="wux-calendar__value">{{currentYear}}</text>
+                        <view bindtap="nextYear" class="wux-calendar__link">
+                            <view class="wux-calendar__icon wux-calendar__icon--next"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="wux-calendar__bd">
+                <view class="wux-calendar__weekdays" wx:if="{{weekHeader}}">
+                    <view class="wux-calendar__weekday {{item.weekend?'wux-calendar__weekday--weekend':''}}" wx:for="{{weeks}}">
+                            {{item.dayName}}
+                        </view>
+                </view>
+                <view class="wux-calendar__months">
+                    <view bindtouchend="onTouchEnd" bindtouchmove="onTouchMove" bindtouchstart="onTouchStart" class="wux-calendar__months-content" style="{{wrapperTranslate}}">
+                        <view class="wux-calendar__month {{index===0?'wux-calendar__month--prev':index===1?'wux-calendar__month--current':'wux-calendar__month--next'}}" data-month="{{month.month}}" data-year="{{month.year}}" style="{{monthsTranslate[index]}}" wx:for="{{months}}" wx:for-item="month">
+                            <view class="wux-calendar__days" wx:for="{{month.items}}" wx:for-item="row">
+                                <view bindtap="onDayClick" class="wux-calendar__day {{col.type.prev?'wux-calendar__day--prev':''}} {{col.type.next?'wux-calendar__day--next':''}} {{col.type.today?'wux-calendar__day--today':''}} {{col.type.selected?'wux-calendar__day--selected':''}} {{col.type.weekend?'wux-calendar__day--weekend':''}} {{col.type.disabled?'wux-calendar__day--disabled':''}}" data-date="{{col.date}}" data-day="{{col.day}}" data-month="{{col.month}}" data-type="{{col.type}}" data-year="{{col.year}}" wx:for="{{row}}" wx:for-item="col">
+                                    <text class="wux-calendar__text">{{col.day}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</wux-popup>

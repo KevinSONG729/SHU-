@@ -1,0 +1,3 @@
+<wux-cell-group label="{{label}}" title="{{title}}" wuxClass="wux-accordion-group">
+    <slot></slot>
+</wux-cell-group>

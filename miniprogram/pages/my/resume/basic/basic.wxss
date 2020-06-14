@@ -1,0 +1,8 @@
+input {
+    text-align: right;
+}
+
+.btn_box {
+    width: 92%;
+    padding: 4%;
+}

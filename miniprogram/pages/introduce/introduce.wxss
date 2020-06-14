@@ -1,0 +1,153 @@
+/* pages/introduce/introduce.wxss */
+.bg{
+  height: 100%;
+  background-image:url("https://ae01.alicdn.com/kf/Hd36eca6e198b4bd9b9d8dd7a64f0c7b0v.jpg");
+  background-size: cover;
+  /*linear-gradient(to top, #f43b47 0%, #453a94 100%);*/
+}
+.bg .lovedots{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg .lovedots view{
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: red;
+  margin-right: 8px;
+}
+.btn{
+  width: 100%;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  z-index: -2;
+}
+.btn1{
+  width: 70%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+  background: linear-gradient(90deg,#b465da,#f441a5,#ffeb3b,#ee609c);
+  background-size:400%;
+  animation: sun 6s infinite;
+  z-index: 1;
+  border-radius: 80px;
+}
+text::before{
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 28%;
+  background:linear-gradient(90deg,#b465da,#f441a5,#ffeb3b,#ee609c);
+  background-size: 400%;
+  filter: blur(10px);
+  z-index: -1;
+  animation: sun 6s infinite;
+  border-radius: 80px;
+}
+.bg .lovedots view:nth-child(1){
+  background-color: red;
+  animation: love1 4s 0s infinite;
+}
+.bg .lovedots view:nth-child(2){
+  background-color: royalblue;
+  animation: love2 4s 0.2s infinite;
+}
+.bg .lovedots view:nth-child(3){
+  background-color: red;
+  animation: love3 4s 0.4s infinite;
+}
+.bg .lovedots view:nth-child(4){
+  background-color: royalblue;
+  animation: love4 4s 0.6s infinite;
+}
+.bg .lovedots view:nth-child(5){
+  background-color: red;
+  animation: love5 4s 0.8s infinite;
+}
+.bg .lovedots view:nth-child(6){
+  background-color: royalblue;
+  animation: love4 4s 1s infinite;
+}
+.bg .lovedots view:nth-child(7){
+  background-color: red;
+  animation: love3 4s 1.2s infinite;
+}
+.bg .lovedots view:nth-child(8){
+  background-color: royalblue;
+  animation: love2 4s 1.4s infinite;
+}
+.bg .lovedots view:nth-child(9){
+  background-color:red;
+  animation: love1 4s 1.6s infinite;
+}
+.btn:hover::before{
+  animation: sun 6s infinite;
+}
+.btn:hover{
+  animation: sun 6s infinite;
+}
+@keyframes sun{
+  100%{
+    background-position: -400% 0;
+  }
+}
+@keyframes love1{
+  30%,50%{
+    height: 35px;
+    transform: translateY(-47px);
+  }
+  70%,100%{
+    height: 10px;
+    transform: translateY(0px);
+  }
+}
+@keyframes love2{
+  30%,50%{
+    height: 65px;
+    transform: translateY(-45px);
+  }
+  70%,100%{
+    height: 10px;
+    transform: translateY(0px);
+  }
+}
+@keyframes love3{
+  30%,50%{
+    height: 90px;
+    transform: translateY(-45px);
+  }
+  70%,100%{
+    height: 10px;
+    transform: translateY(0px);
+  }
+}
+@keyframes love4{
+  30%,50%{
+    height: 90px;
+    transform: translateY(-30px);
+  }
+  70%,100%{
+    height: 10px;
+    transform: translateY(0px);
+  }
+}
+@keyframes love5{
+  30%,50%{
+    height: 100px;
+    transform: translateY(-15px);
+  }
+  70%,100%{
+    height: 10px;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,12 @@
+<wux-animation-group bind:click="onClick" classNames="wux-animate--slideInDown" in="{{in}}" wuxClass="wux-notification">
+    <view class="wux-notification__content">
+        <view class="wux-notification__hd" wx:if="{{image}}">
+            <image class="wux-notification__image" src="{{image}}"></image>
+        </view>
+        <view class="wux-notification__bd" wx:if="{{title&&text}}">
+            <view class="wux-notification__title" wx:if="{{title}}">{{title}}</view>
+            <view class="wux-notification__text" wx:if="{{text}}">{{text}}</view>
+        </view>
+        <view class="wux-notification__ft"></view>
+    </view>
+</wux-animation-group>

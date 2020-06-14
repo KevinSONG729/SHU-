@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "基本信息",
+    "disableScroll": true,
+    "usingComponents": {
+        "wux-cell-group": "../../../../assembly/cell-group/index",
+        "wux-cell": "../../../../assembly/cell/index",
+        "wux-input": "../../../../assembly/input/index",
+        "wux-icon": "../../../../assembly/icon/index",
+        "wux-button": "../../../../assembly/button/index"
+    }
+}

@@ -1,0 +1,80 @@
+<wux-notification id="wux-notification"></wux-notification>
+<view>
+    <form bindreset="formReset" bindsubmit="formSubmit">
+        <wux-cell-group title="职位名称">
+            <view class="weui-cell">
+                <input class="input" name="position_title" placeholder="请输入职位名称"></input>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group class="{{type!=2?'hide':''}}" title="职位分类">
+            <view class="weui-cell">
+                <picker bindchange="change_category" bindcolumnchange="columnchange_category" class="input" mode="multiSelector" range="{{category}}" value="{{category_value[2]}}">
+                    <input class="" disabled="disabled" maxlength="4" value="{{category_value[0]}}"></input>
+                </picker>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group title="结算方式">
+            <view bindtap="open" class="weui-cell">
+                <input class="input" disabled="disabled" value="{{settlement==1?'月结':'日结'}}"></input>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group title="薪资待遇">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">最低</view>
+                <input maxlength="5" name="salary_bottom" placeholder="请输入最低薪资" type="number"></input>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">最高</view>
+                <input maxlength="5" name="salary_top" placeholder="请输入最高薪资" type="number"></input>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group title="招聘人数">
+            <view class="weui-cell">
+                <input class="input" maxlength="3" name="numbers" placeholder="请输入招聘人数" type="number"></input>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group class="{{type!=2?'hide':''}}" title="福利待遇">
+            <wux-checkbox-group bind:change="change_welfare" name="a" title="" value="{{welfare}}">
+                <wux-checkbox color="energized" title="五险" value="1"></wux-checkbox>
+                <wux-checkbox color="energized" title="公积金" value="2"></wux-checkbox>
+                <wux-checkbox color="energized" title="餐补" value="3"></wux-checkbox>
+                <wux-checkbox color="energized" title="房补" value="4"></wux-checkbox>
+                <wux-checkbox color="energized" title="包吃" value="5"></wux-checkbox>
+                <wux-checkbox color="energized" title="包住" value="6"></wux-checkbox>
+                <wux-checkbox color="energized" title="双休" value="7"></wux-checkbox>
+                <wux-checkbox color="energized" title="其他福利" value="8"></wux-checkbox>
+            </wux-checkbox-group>
+        </wux-cell-group>
+        <wux-cell-group title="工作地点">
+            <view bindtap="get_location" class="weui-cell">
+                <view class="overstep" name="worker_address" style="height:25px">{{location.address}}</view>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group title="工作时长">
+            <view class="weui-cell">
+                <picker bindchange="change_duration" class="input" range="{{duration_array}}" value="{{duration}}">
+                    <input class="input" disabled="disabled" maxlength="4" value="{{duration}}小时"></input>
+                </picker>
+            </view>
+        </wux-cell-group>
+        <wux-cell-group title="工作描述">
+            <wux-cell hoverClass="none">
+                <wux-textarea hasCount bind:change="changeDescription" cursorSpacing="80" maxlength="200" placeholder="请输入工作描述" rows="8"></wux-textarea>
+            </wux-cell>
+        </wux-cell-group>
+        <wux-cell-group title="联系方式">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">联系人</view>
+                <input name="contacts" placeholder="请输入联系人"></input>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">联系电话</view>
+                <input name="phone" placeholder="请输入联系电话" type="number"></input>
+            </view>
+        </wux-cell-group>
+        <view class="btn_box">
+            <button class="weui-btn" formType="submit" style="background:#FBC139;" type="primary">提交</button>
+            <button class="weui-btn" formType="reset" style="background:#fff" type="default">重置</button>
+        </view>
+    </form>
+</view>

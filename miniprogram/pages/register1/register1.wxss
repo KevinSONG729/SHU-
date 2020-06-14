@@ -1,0 +1,61 @@
+#container{
+  background-image: url(https://hbimg.huabanimg.com/e42909d92b162df3968e7389201ce5c77ddafd761c9b03-S3p9J3_fw658);
+  height: 100vh;
+  margin-top: 0;
+  background-size: 100% 100%;
+  display: flex;
+}
+#LOGIN{
+  font-size: 21px;
+  font-weight: 900;
+  color: #FFFFFF90;
+  margin-top: 5%;
+}
+#container #login_box{
+  width:50%;
+  height: 65vh;
+  background: #00000060;
+  margin: auto;
+  margin-top: 25%;
+  text-align: center;
+  border-radius:10px;
+  padding: 10vh 10vh;
+}
+#login_box #form #input_box{
+  margin-top: 5%;
+  margin-bottom: 6%;
+  display: flex;
+}
+#login_box #form #input_box input{
+  border: 0;
+  text-align: left;
+  width: 90%;
+  font-size: 15px;
+  color:#FFFFFF;
+  background: #FFFFFF00;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 5px 10px;
+  margin-top: 5vh;
+}
+
+#login_box button{
+  margin-top: 5vh;
+  width: 50%;
+  height:30px;
+  border-radius: 10px;
+  border: 0;
+  color: rgb(101, 97, 97);
+  font-size: 15px;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+.icon{
+  width: 20px;
+  margin-top: 6.5vh;
+}
+#sign_up{
+  font-size: 12px;
+  margin-top: 3vh;
+  color: #FFFFFF60;
+  text-align: center;
+  margin-bottom: 0;
+}

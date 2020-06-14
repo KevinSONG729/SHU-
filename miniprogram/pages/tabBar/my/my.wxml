@@ -1,0 +1,69 @@
+<wux-floating-button action="../../public/icon/position_add.png" actionRotate="true" backdrop="true" bind:click="dorelease" buttons="{{buttons}}" class="{{isRelease==true?'show':'hide'}}" position="bottomRight" theme="energized"></wux-floating-button>
+<view class="page">
+    <view class="my_head">
+        <view class="head_left">
+            <wux-avatar size="large" src="{{userinfo.headImgUrl}}"></wux-avatar>
+        </view>
+        <view class="head_right">
+            <view class="{{userinfo.nickName==''?'hide':'show head_right_change'}}">
+                <text style="font-size:26px;">{{userinfo.nickName}}</text>
+                <text style="font-size:12px;">认证企业｜个人用户</text>
+                <text style="font-size:12px;">已发布2个职位｜已申请4个职位</text>
+            </view>
+            <view class="{{userinfo.nickName==''?'show':'hide'}}">
+                <text bindtap="openUrl" data-type="login">微信登录</text>
+            </view>
+        </view>
+    </view>
+    <view class="my_account">
+        <view class="account_box">
+            <view class="integral">
+                <text>信用积分：100</text>
+            </view>
+            <view class="auth">
+                <view bindtap="changeToFirst" data-type="phone_check">个人认证</view>
+                <view>学院认证</view>
+            </view>
+        </view>
+        <view class="my_log">
+            <view class="log_title">
+                <image mode="aspectFit" src="../../../public/icon/限时.png"></image>
+                <text>个人中心</text>
+            </view>
+            <view class="log_category">
+                <view>
+                    <wux-badge count="100">
+                        <image mode="aspectFit" src="../../../public/icon/消息.png"></image>
+                    </wux-badge>
+                    <text>私信</text>
+                </view>
+                <view>
+                    <wux-badge count="100">
+                        <image mode="aspectFit" src="../../../public/icon/邮箱.png"></image>
+                    </wux-badge>
+                    <text>申请</text>
+                </view>
+                <view>
+                    <wux-badge>
+                        <image mode="aspectFit" src="../../../public/icon/图库相册.png"></image>
+                    </wux-badge>
+                    <text>相册</text>
+                </view>
+                <view>
+                    <wux-badge>
+                        <image mode="aspectFit" src="../../../public/icon/设置.png"></image>
+                    </wux-badge>
+                    <text>设置</text>
+                </view>
+            </view>
+        </view>
+        <view class="my_list">
+            <view>
+                <wux-cell isLink bindtap="openUrl" data-type="resume" extra="资料完成80%" title="我的资料"></wux-cell>
+                <wux-cell isLink extra="" title="个人标签"></wux-cell>
+                <wux-cell isLink extra="" title="找朋友"></wux-cell>
+                <wux-cell isLink extra="" title="匹配记录"></wux-cell>
+            </view>
+        </view>
+    </view>
+</view>
